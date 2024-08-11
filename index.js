@@ -1,17 +1,20 @@
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
+import env from "dotenv";
+
+env.config();
+const app = express();
+const port = process.env.BACKEND_PORT;
+
 
 const db = new pg.Client({
-  user: "postgres",
-  host: "localhost",
-  database: "igbodict",
-  password: process.env.POSTGRES_PASS,
-  port: 5432,
+  user: process.env.DATABASE_USER,
+  host: process.env.DATABASE_SERVER,
+  database: process.env.DATABASE,
+  password: process.env.DATABASE_PASSWORD,
+  port: process.env.DATABASE_PORT,
 });
-
-const app = express();
-const port = 3000;
 
 
 db.connect();
@@ -28,6 +31,7 @@ let totalCorrect = 0;
 // ];
 
 async function getData() {
+
   db.query("SELECT * FROM questions ORDER BY RANDOM() LIMIT 10 ", (err, res) => {
     if (err) {
       console.error("Error executing query", err.stack);
