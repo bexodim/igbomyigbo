@@ -33,7 +33,7 @@ body {
   flex-direction: column;
 /*  justify-content: space-evenly;*/
   max-width: 85%;
-  height: 85vh;
+  height: 78vh;
   margin: 5% auto 0 auto;
   padding: 20px;
   background-color: #fff;
@@ -181,7 +181,9 @@ button {
 }
 
 @media only screen and (max-height: 500px) {
-
+  .container {
+	  height: 60vh;
+  }
   h3 {
     margin: 0;
   }
