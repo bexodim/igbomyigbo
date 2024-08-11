@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+/*  background-image: url(../images/background.jpg);*/
+  background-color: #DBEFDC;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Kanit, Arial, sans-serif;
+}
+
+.progress-bar {
+  background-color: #BFD8C0;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12px;
+}
+
+.progress {
+  background-color: #029D24;
+}
+
+.star {
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+/*  justify-content: space-evenly;*/
+  max-width: 85%;
+  height: 85vh;
+  margin: 5% auto 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+}
+/*
+.container > * {
+  flex-basis: 150px;
+}*/
+
+
+
+h1 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 4rem;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 4rem;
+  margin-top: 0;
+}
+
+h3 {
+  margin: 20% 0;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 2em;
+  text-align: center;
+}
+
+.answer-container {
+  width: 100%;
+  text-align: center;
+  margin: 20% auto;
+}
+
+
+
+input {
+  text-align: center;
+  width: 80%;
+  height: 1.5rem;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  background-image: url(../images/right-arrow.png);
+  background-repeat: no-repeat;
+  background-color: #fff;
+  height: 112px;
+  width: 112px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 60%;
+}
+
+
+#result {
+  text-align: center;
+  font-size: 24px;
+}
+
+.checkmark {
+  color: transparent;
+  animation: checkmark 1s ease;
+}
+
+.cross {
+  color: transparent;
+  animation: cross 1s ease;
+}
+
+@keyframes checkmark {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: green;
+  }
+}
+
+@keyframes cross {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.restart-button {
+  display: inline-block;
+  background-color: #3E543F;
+  color: #FFF;
+  padding: 15px 30px;
+  font-size: 1.5em;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../images/logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    max-width: 40%;
+    margin: 0 auto;
+  }
+
+  h3 {
+    margin: 10px 0;
+  }
+  h2 {
+    margin: 10px 0;
+  }
+  h1 {
+    margin: 10px 0;
+  }
+  .answer-container {
+    margin: 20% auto;
+  }
+}

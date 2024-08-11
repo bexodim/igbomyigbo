@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IGBO M | MY IGBO</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body id="app">
+  <div class="progress-bar"></div><div class="progress-bar progress" style="width: <%=progress %>"></div>
+  <div class="star">✨</div>
+  <form class="container" action="/submit" method="post">
+    <h3>translate this word</h3>
+    <h1 id="englishText">
+      <%=question.igbotext %>
+    </h1>
+    <div class="answer-container">
+      <input type="text" name="answer" id="userInput" placeholder="type your english translation" autofocus autocomplete="off">
+    </div>
+  </form>
+</body>
+
+</html>
